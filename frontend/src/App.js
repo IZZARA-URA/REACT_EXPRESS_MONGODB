@@ -13,6 +13,9 @@ import Customers from "scenes/customers";
 import Transaction from "scenes/transaction";
 import Geography from "scenes/geography";
 import Overview from "scenes/overview";
+import Daily from "scenes/daily";
+import Monthly from "scenes/mounthly";
+import Breakdown from "scenes/breakdown";
 
 function App() {
   /* FOR mode */
@@ -44,6 +47,9 @@ function App() {
               <Route path="/transactions" element={<Transaction />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/overview" element={<Overview />}/>
+              <Route path="/daily" element={<Daily />}/>
+              <Route path="/monthly" element={<Monthly />}/>
+              <Route path="/breakdown" element={<Breakdown />}/>
             </Route>
           </Routes>
         </ThemeProvider>
