@@ -21,13 +21,15 @@ import {
     dataProduct, 
     dataProductStat,
     dataTransaction,
-    dataOverallStat
+    dataOverallStat,
+    dataAffiliateStat
 } from "./data/index.js"
 
 // IMPORT ROUTES MODULES//
 import clientRoutes from './routes/client.js'
 import generalRoutes from './routes/general.js'
 import salesRoutes from './routes/sales.js'
+import managementRoutes from './routes/management.js'
 
 const MONGO_URL = "mongodb+srv://dummyuser:dummyuser@cluster0.yul7ox5.mongodb.net/?retryWrites=true&w=majority"
 const PORT = 8080
@@ -43,6 +45,7 @@ mongoose.connect(MONGO_URL, {
     // ProductStat.insertMany(dataProductStat)
     // Transaction.insertMany(dataTransaction)
     // OverallStat.insertMany(dataOverallStat)
+    // AffiliateStat.insertMany(dataAffiliateStat)
 })
 .catch()
 
@@ -68,5 +71,6 @@ app.get('/', (req, res) => {
 app.use("/client", clientRoutes)
 app.use("/general", generalRoutes)
 app.use("/sales", salesRoutes)
+app.use("/management", managementRoutes)
 
 // app.listen(PORT, () => {console.log('Application is running on port', PORT);});
