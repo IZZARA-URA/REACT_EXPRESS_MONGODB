@@ -1,9 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BaseURI = "http://localhost:8080"
+// const BaseURI = "http://localhost:8080"
+
+// import dotenv 
 
 export const api = createApi({ 
-    baseQuery: fetchBaseQuery({ baseUrl: BaseURI }),
+    baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8080" }),
     reducerPath: "adminApi", 
     tagTypes: [
         "User",
